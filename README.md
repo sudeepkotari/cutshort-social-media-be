@@ -11,6 +11,7 @@ https://cutshort-assignment.onrender.com/
 ## Features delivered in the application.
 * Role based Authorization.
 * Rate Limiting for all the API's.
+* All listing API's are paginated.
 * Implemented Access and Refresh Token based authentication.
 * Used Redis to cache the refresh tokens.
 * Used Redis for caching and Mongodb as databse.
