@@ -1,18 +1,18 @@
-GET http://localhost:3000
+GET https://cutshort-assignment.onrender.com
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTI5OTYxNjIsImV4cCI6MTU5Mjk5NjE3NywiYXVkIjoiNWVlYTBlOTlkMTU3ZjYzZjNlMzYxYjQxIiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.fsED23a_2dINM1saPjmHkc_gVrsuptb1oSNh0GR-03M
 
 ###Register Route
-POST http://localhost:3000/v1/auth/register
+POST https://cutshort-assignment.onrender.com/v1/auth/register
 Content-Type: application/json
 
 {
   "name": "sudeep",
-  "email": "sudeep@gmail.com",
+  "email": "sudeepk@gmail.com",
   "password": "12346789"
 }
 
 ###Login Route
-POST http://localhost:3000/v1/auth/login
+POST https://cutshort-assignment.onrender.com/v1/auth/login
 Content-Type: application/json
 
 {
@@ -21,7 +21,7 @@ Content-Type: application/json
 }
 
 ###Refresh token Route
-POST http://localhost:3000/v1/auth/refresh-token
+POST https://cutshort-assignment.onrender.com/v1/auth/refresh-token
 Content-Type: application/json
 
 {
@@ -29,7 +29,7 @@ Content-Type: application/json
 }
 
 ###Logout Route
-DELETE http://localhost:3000/v1/auth/logout
+DELETE https://cutshort-assignment.onrender.com/v1/auth/logout
 Content-Type: application/json
 
 {
@@ -37,7 +37,7 @@ Content-Type: application/json
 }
 
 ###Create Posts Route
-POST http://localhost:3000/v1/post
+POST https://cutshort-assignment.onrender.com/v1/post
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiVVNFUiIsImlhdCI6MTY4MDMyMjA5NSwiZXhwIjoxNjgwOTI2ODk1LCJhdWQiOiI2NDI3YWUyZjg3ZmUxZDZlM2ZhM2ZmYjUiLCJpc3MiOiJjdXRzaG9ydC5jb20ifQ.H9PyUQ55NrTmrjXbgWp4CVBot0XCyF0B1CUgXo-hnT4
 Content-Type: application/json
 
@@ -47,7 +47,7 @@ Content-Type: application/json
 }
 
 ###PUT Posts Route
-PUT http://localhost:3000/v1/post/6427af5b00b1ddfcc12bdce8
+PUT https://cutshort-assignment.onrender.com/v1/post/6427af5b00b1ddfcc12bdce8
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
 Content-Type: application/json
 
@@ -59,7 +59,7 @@ Content-Type: application/json
 }
 
 ###PATCH Posts Route
-PATCH  http://localhost:3000/v1/post/6426c793af4097e985d5e747
+PATCH  https://cutshort-assignment.onrender.com/v1/post/6426c793af4097e985d5e747
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiVVNFUiIsImlhdCI6MTY4MDMyMjA5NSwiZXhwIjoxNjgwOTI2ODk1LCJhdWQiOiI2NDI3YWUyZjg3ZmUxZDZlM2ZhM2ZmYjUiLCJpc3MiOiJjdXRzaG9ydC5jb20ifQ.H9PyUQ55NrTmrjXbgWp4CVBot0XCyF0B1CUgXo-hnT4
 Content-Type: application/json
 
@@ -68,16 +68,16 @@ Content-Type: application/json
 }
 
 ###GET Posts Route
-GET  http://localhost:3000/v1/post/6426b6d04b81282a17db07ff
+GET  https://cutshort-assignment.onrender.com/v1/post/6426b6d04b81282a17db07ff
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
 
 
 ###GET ALL Posts Route
-GET  http://localhost:3000/v1/post?page=1&size=10
+GET  https://cutshort-assignment.onrender.com/v1/post?page=1&size=10
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
 
 ###Create Todo Route
-POST http://localhost:3000/v1/todo
+POST https://cutshort-assignment.onrender.com/v1/todo
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
 Content-Type: application/json
 
@@ -86,7 +86,7 @@ Content-Type: application/json
 }
 
 ###PUT Todo Route
-PUT http://localhost:3000/v1/todo/6427002350076353910ae2d1
+PUT https://cutshort-assignment.onrender.com/v1/todo/6427002350076353910ae2d1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
 Content-Type: application/json
 
@@ -98,7 +98,7 @@ Content-Type: application/json
 }
 
 ###PATCH Todo Route
-PATCH  http://localhost:3000/v1/todo/6427002350076353910ae2d1
+PATCH  https://cutshort-assignment.onrender.com/v1/todo/6427002350076353910ae2d1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
 Content-Type: application/json
 
@@ -107,16 +107,16 @@ Content-Type: application/json
 }
 
 ###GET Todo Route
-GET  http://localhost:3000/v1/todo/6427002350076353910ae2d1
+GET  https://cutshort-assignment.onrender.com/v1/todo/6427002350076353910ae2d1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
 
 
 ###GET ALL Todo Route
-GET  http://localhost:3000/v1/todo?page=1&size=1
+GET  https://cutshort-assignment.onrender.com/v1/todo?page=1&size=1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
 
 ###Add Comment Route
-POST http://localhost:3000/v1/post/64271c09402e264dfc580315/comment
+POST https://cutshort-assignment.onrender.com/v1/post/64271c09402e264dfc580315/comment
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
 Content-Type: application/json
 
@@ -125,7 +125,7 @@ Content-Type: application/json
 }
 
 ###PATCH Comment Route
-PATCH  http://localhost:3000/v1/post/64271c09402e264dfc580315/comment/64271ee9a215ba91c6355db1
+PATCH  https://cutshort-assignment.onrender.com/v1/post/64271c09402e264dfc580315/comment/64271ee9a215ba91c6355db1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
 Content-Type: application/json
 
@@ -134,15 +134,15 @@ Content-Type: application/json
 }
 
 ###GET ALL Comments Route
-GET  http://localhost:3000/v1/post/64271c09402e264dfc580315/comments?page=1&size=10
+GET  https://cutshort-assignment.onrender.com/v1/post/64271c09402e264dfc580315/comments?page=1&size=10
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
 
 ###GET User Route
-GET  http://localhost:3000/v1/user/6426aefd3d65eee5fa9ea51d
+GET  https://cutshort-assignment.onrender.com/v1/user/6426aefd3d65eee5fa9ea51d
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
 
 ###PATCH Todo Route
-PATCH  http://localhost:3000/v1/admin/setrole
+PATCH  https://cutshort-assignment.onrender.com/v1/admin/setrole
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
 Content-Type: application/json
 

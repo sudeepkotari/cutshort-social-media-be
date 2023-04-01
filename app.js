@@ -1,6 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const createError = require("http-errors");
+const cors = require('cors');
 require("dotenv").config();
 require("./helpers/init_mongodb");
 require("./helpers/init_redis");
@@ -13,6 +14,7 @@ const AdminRoute = require("./routes/admin.route");
 const { limiter } = require("./helpers/rate_limit_helper");
 
 const app = express();
+app.use(cors()) // allow frontend domain here
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
