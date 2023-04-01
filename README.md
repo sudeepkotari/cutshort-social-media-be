@@ -9,13 +9,13 @@ To start application.
 https://cutshort-assignment.onrender.com/
 
 ## Features delivered in the application.
-* Role based Authorization.
-* Rate Limiting for all the API's.
-* All listing API's are paginated.
-* Implemented Access and Refresh Token based authentication.
+* Role-based Authorization.
+* Rate Limiting for all the APIs.
+* All listing APIs are paginated.
+* Implemented Access and Refresh Token-based authentication.
 * Used Redis to cache the refresh tokens.
-* Used Redis for caching and Mongodb as databse.
-* Followed all the best practises and MVC pattern.
+* Used Redis for caching and MongoDB as a database.
+* Followed all the best practices and MVC patterns.
 
 # Check rest.http file to get more details about API's.
 
