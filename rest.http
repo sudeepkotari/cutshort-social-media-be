@@ -1,0 +1,152 @@
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTI5OTYxNjIsImV4cCI6MTU5Mjk5NjE3NywiYXVkIjoiNWVlYTBlOTlkMTU3ZjYzZjNlMzYxYjQxIiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.fsED23a_2dINM1saPjmHkc_gVrsuptb1oSNh0GR-03M
+
+###Register Route
+POST http://localhost:3000/v1/auth/register
+Content-Type: application/json
+
+{
+  "name": "sudeep",
+  "email": "sudeep@gmail.com",
+  "password": "12346789"
+}
+
+###Login Route
+POST http://localhost:3000/v1/auth/login
+Content-Type: application/json
+
+{
+  "email": "sudeep@gmail.com",
+  "password": "12346789"
+}
+
+###Refresh token Route
+POST http://localhost:3000/v1/auth/refresh-token
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTI5OTYxMzcsImV4cCI6MTYyNDU1MzczNywiYXVkIjoiNWVlYTBlOTlkMTU3ZjYzZjNlMzYxYjQxIiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.9kFX7LEzyh6eopqF_TGZQRwYqrIPUUdN441ekfKxu7Q"
+}
+
+###Logout Route
+DELETE http://localhost:3000/v1/auth/logout
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTI1ODcyOTIsImV4cCI6MTYyNDE0NDg5MiwiYXVkIjoiNWVlYTBlOTlkMTU3ZjYzZjNlMzYxYjQxIiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.OGfV-n2fsuV2D5nvUGEzU7KLtkbIy1Pmm4DwxB75MKU"
+}
+
+###Create Posts Route
+POST http://localhost:3000/v1/post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiVVNFUiIsImlhdCI6MTY4MDMyMjA5NSwiZXhwIjoxNjgwOTI2ODk1LCJhdWQiOiI2NDI3YWUyZjg3ZmUxZDZlM2ZhM2ZmYjUiLCJpc3MiOiJjdXRzaG9ydC5jb20ifQ.H9PyUQ55NrTmrjXbgWp4CVBot0XCyF0B1CUgXo-hnT4
+Content-Type: application/json
+
+{
+  "title": "demo post 1",
+  "body": "demo post 1 demo post 1 demo post 1 demo post 1 demo post 1 demo post 1 demo post 1 demo post 1 demo post 1 demo post 1 demo post 1 demo post 1"
+}
+
+###PUT Posts Route
+PUT http://localhost:3000/v1/post/6427af5b00b1ddfcc12bdce8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
+Content-Type: application/json
+
+{
+  "id": "6426b6d04b81282a17db07ff",
+  "title": "Post title 3",
+  "body": "Post body 4",
+  "userId":"6426aefd3d65eee5fa9ea51d"
+}
+
+###PATCH Posts Route
+PATCH  http://localhost:3000/v1/post/6426c793af4097e985d5e747
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiVVNFUiIsImlhdCI6MTY4MDMyMjA5NSwiZXhwIjoxNjgwOTI2ODk1LCJhdWQiOiI2NDI3YWUyZjg3ZmUxZDZlM2ZhM2ZmYjUiLCJpc3MiOiJjdXRzaG9ydC5jb20ifQ.H9PyUQ55NrTmrjXbgWp4CVBot0XCyF0B1CUgXo-hnT4
+Content-Type: application/json
+
+{
+  "body": "Post body 7"
+}
+
+###GET Posts Route
+GET  http://localhost:3000/v1/post/6426b6d04b81282a17db07ff
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
+
+
+###GET ALL Posts Route
+GET  http://localhost:3000/v1/post?page=1&size=10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
+
+###Create Todo Route
+POST http://localhost:3000/v1/todo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
+Content-Type: application/json
+
+{
+  "title": "Todo title 2"
+}
+
+###PUT Todo Route
+PUT http://localhost:3000/v1/todo/6427002350076353910ae2d1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
+Content-Type: application/json
+
+{
+  "id": "6426b6d04b81282a17db07ff",
+  "title": "TODO cutshort assignment",
+  "completed": true,
+  "userId":"6426aefd3d65eee5fa9ea51d"
+}
+
+###PATCH Todo Route
+PATCH  http://localhost:3000/v1/todo/6427002350076353910ae2d1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
+Content-Type: application/json
+
+{
+  "completed": false
+}
+
+###GET Todo Route
+GET  http://localhost:3000/v1/todo/6427002350076353910ae2d1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
+
+
+###GET ALL Todo Route
+GET  http://localhost:3000/v1/todo?page=1&size=1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
+
+###Add Comment Route
+POST http://localhost:3000/v1/post/64271c09402e264dfc580315/comment
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
+Content-Type: application/json
+
+{
+  "body": "Comment 1"
+}
+
+###PATCH Comment Route
+PATCH  http://localhost:3000/v1/post/64271c09402e264dfc580315/comment/64271ee9a215ba91c6355db1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
+Content-Type: application/json
+
+{
+   "body": "Comment edited"
+}
+
+###GET ALL Comments Route
+GET  http://localhost:3000/v1/post/64271c09402e264dfc580315/comments?page=1&size=10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
+
+###GET User Route
+GET  http://localhost:3000/v1/user/6426aefd3d65eee5fa9ea51d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
+
+###PATCH Todo Route
+PATCH  http://localhost:3000/v1/admin/setrole
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODAyNTgyNDEsImV4cCI6MTY4MDg2MzA0MSwiYXVkIjoiNjQyNmFlZmQzZDY1ZWVlNWZhOWVhNTFkIiwiaXNzIjoiY3V0c2hvcnQuY29tIn0.7p2YF--hkrzISrdr6Bac4wu5KOmWfQBFTGI3Ds5YJ6A
+Content-Type: application/json
+
+{
+  "userId":"6427ae2f87fe1d6e3fa3ffb5",
+  "role": "USER"
+}
