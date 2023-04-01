@@ -4,6 +4,8 @@ cutshort backend assignement
 To Install dependencies.
 ## npm start
 To start application.
+## jest
+To run testcases.
 ### API Docs are there in rest.http file install rest clinet vscode extension to hit api's
 # Deployed API endpoint.
 https://cutshort-assignment.onrender.com/
@@ -16,6 +18,7 @@ https://cutshort-assignment.onrender.com/
 * Used Redis to cache the refresh tokens.
 * Used Redis for caching and MongoDB as a database.
 * Followed all the best practices and MVC patterns.
+* Test cases using jest and supertest.
 
 # Check rest.http file to get more details about API's.
 
