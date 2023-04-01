@@ -24,7 +24,7 @@ module.exports = {
         return next(createError.NotFound("Post not found."));
       });
   },
-  checkAcessToEditTodo: () => {
+  checkAcessToEditTodo: (req, res, next) => {
     Todo.findById(req.params.id)
       .then((todo) => {
         if (!todo) throw createError.NotFound("Post not found");
